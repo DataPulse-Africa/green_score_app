@@ -1,5 +1,12 @@
 import streamlit as st
 
+# Streamlit app layout
+st.set_page_config(page_title="Green Score Estimator", layout="centered")
+
+st.title("🌱 Green Score Estimator for SMEs & Agri-Businesses")
+st.markdown("Answer the questions below to get your **Green Score** — your readiness for green funding, carbon credits, or ESG programs.")
+
+
 # Questions and options
 questions = [
     {
@@ -50,11 +57,6 @@ def calculate_score(responses):
     green_score = (total_score / total_possible) * 100
     return round(green_score, 2)
 
-# Streamlit app layout
-st.set_page_config(page_title="Green Score Estimator", layout="centered")
-
-st.title("🌱 Green Score Estimator for SMEs & Agri-Businesses")
-st.markdown("Answer the questions below to get your **Green Score** — your readiness for green funding, carbon credits, or ESG programs.")
 
 responses = []
 
